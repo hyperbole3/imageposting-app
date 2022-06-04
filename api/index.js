@@ -49,6 +49,7 @@ app.use("/api/auth", authRoute);
 app.use("/api/posts", postsRoute);
 app.use("/api/search", searchRoute);
 
-app.listen(8800, ()=>{
-  console.log("listening on port 8800.");
+const PORT = process.env.PORT || 8800;
+app.listen(PORT, ()=>{
+  console.log(`listening on port ${PORT}.`);
 });
